@@ -1,6 +1,7 @@
 <div align="center"> 
         
-    # 📉 Optimizer Loss Landscape
+
+# 📉 Optimizer Loss Landscape
     
 
 **Visualizing how optimizers navigate loss surfaces — a geometric and intuitive exploration of deep learning optimization dynamics**
