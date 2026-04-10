@@ -71,14 +71,14 @@ Compare how different optimizers move:
 
 ### 🧩 Project Structure
 
-| File                | Description                                     |
-| ------------------- | ----------------------------------------------- |
-| model.py            | Simple neural network (MLP / toy model)         |
-| train.py            | Training loop with selectable optimizers        |
-| loss_landscape.py   | Surface computation via parameter perturbations |
-| plot.py             | Visualization (2D/3D contour + trajectory)      |
-| optimizers.py       | Custom or wrapped optimizers                    |
-| utils.py            | Helpers (sampling, normalization, tracking)     |
+| File                  | Description                                     |
+| --------------------- | ----------------------------------------------- |
+| `model.py`            | Simple neural network (MLP / toy model)         |
+| `train.py`            | Training loop with selectable optimizers        |
+| `loss_landscape.py`   | Surface computation via parameter perturbations |
+| `plot.py`             | Visualization (2D/3D contour + trajectory)      |
+| `optimizers.py`       | Custom or wrapped optimizers                    |
+| `utils.py`            | Helpers (sampling, normalization, tracking)     |
 
 ---
 
@@ -122,15 +122,15 @@ pip install -r requirements.txt
 
 ### Train a model:
 
-python train.py --optimizer adam
+python `train.py` --optimizer adam
 
 ### Generate loss landscape:
 
-python loss_landscape.py
+python `loss_landscape.py`
 
 ### Visualize:
 
-python plot.py
+python `plot.py`
 
 ---
 
