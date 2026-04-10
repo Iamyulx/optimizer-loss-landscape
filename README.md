@@ -1,16 +1,15 @@
-<div align="center">📉 Optimizer Loss Landscape
+<div align="center"> 
+        
+    # 📉 Optimizer Loss Landscape
+    
 
-Visualizing how optimizers navigate loss surfaces — a geometric and intuitive exploration of deep learning optimization dynamics
+**Visualizing how optimizers navigate loss surfaces — a geometric and intuitive exploration of deep learning optimization dynamics**
 
-"Python" (https://img.shields.io/badge/Python-3.9%2B-blue?logo=python&logoColor=white)
-"PyTorch" (https://img.shields.io/badge/PyTorch-2.x-EE4C2C?logo=pytorch&logoColor=white)
-"Optimization" (https://img.shields.io/badge/Optimization-loss--landscape-8b5cf6)
-"Research" (https://img.shields.io/badge/Focus-geometry--of--training-22c55e)
-"License" (https://img.shields.io/badge/License-MIT-brightgreen)
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-2.x-EE4C2C?logo=pytorch&logoColor=white) ![Optimization](https://img.shields.io/badge/Optimization-loss--landscape-8b5cf6) ![Research](https://img.shields.io/badge/Focus-geometry--of--training-22c55e) ![License](https://img.shields.io/badge/License-MIT-brightgreen)
 
 </div>---
 
-🔍 Overview
+## 🔍 Overview
 
 Training neural networks is not just about minimizing loss — it's about how different optimizers traverse the loss landscape.
 
@@ -21,13 +20,14 @@ This project provides a visual and experimental framework to analyze:
 - Convergence behavior and stability
 - Sharp vs flat minima
 
-«Why this exists: Most tutorials treat optimizers as black boxes.
-This repo makes optimization visible.»
+> **Why this exists: Most tutorials treat optimizers as black boxes.
+> This repo makes optimization visible.**
 
 ---
 
-🧠 Core Idea
+## 🧠 Core Idea
 
+``` 
 Instead of only tracking scalar loss values, we project the loss surface into a 2D/3D landscape and plot optimizer trajectories over it.
 
 Parameter Space (θ)
@@ -43,48 +43,51 @@ Parameter Space (θ)
         │
         ▼
 Optimizer Trajectory Overlay
+``` 
 
 ---
 
-⚙️ What This Project Explores
+## ⚙️ What This Project Explores
 
-📉 Loss Landscape Geometry
+### 📉 Loss Landscape Geometry
 
 - Smooth vs rugged surfaces
 - Saddle points and local minima
 - Curvature and sharpness
 
-🏃 Optimizer Behavior
+### 🏃 Optimizer Behavior
 
 Compare how different optimizers move:
 
-Optimizer| Behavior
-SGD| Noisy, slow but stable
-Momentum| Accelerated in consistent directions
-Adam| Adaptive, fast but sometimes sharp minima
-RMSProp| Smooth adaptive updates
+| Optimizer | Behavior                                  |
+| --------- | ----------------------------------------- |
+| SGD       | Noisy, slow but stable                    |
+| Momentum  | Accelerated in consistent directions      |
+| Adam      | Adaptive, fast but sometimes sharp minima |
+| RMSProp   | Smooth adaptive updates                   |
 
 ---
 
-🧩 Project Structure
+### 🧩 Project Structure
 
-File| Description
-"model.py"| Simple neural network (MLP / toy model)
-"train.py"| Training loop with selectable optimizers
-"loss_landscape.py"| Surface computation via parameter perturbations
-"plot.py"| Visualization (2D/3D contour + trajectory)
-"optimizers.py"| Custom or wrapped optimizers
-"utils.py"| Helpers (sampling, normalization, tracking)
+| File                | Description                                     |
+| ------------------- | ----------------------------------------------- |
+| model.py            | Simple neural network (MLP / toy model)         |
+| train.py            | Training loop with selectable optimizers        |
+| loss_landscape.py   | Surface computation via parameter perturbations |
+| plot.py             | Visualization (2D/3D contour + trajectory)      |
+| optimizers.py       | Custom or wrapped optimizers                    |
+| utils.py            | Helpers (sampling, normalization, tracking)     |
 
 ---
 
-📐 How It Works
+## 📐 How It Works
 
-1. Train a Model
+### 1. Train a Model
 
 A small neural network is trained on a toy dataset.
 
-2. Sample the Loss Surface
+### 2. Sample the Loss Surface
 
 We perturb model parameters along two directions:
 
@@ -95,40 +98,42 @@ Where:
 - "d₁, d₂" are random directions in parameter space
 - "α, β" define a grid
 
-3. Compute Loss Grid
+### 3. Compute Loss Grid
 
 Evaluate:
 
 L(α, β) = Loss(θ + αd₁ + βd₂)
 
-4. Plot Landscape + Trajectory
+### 4. Plot Landscape + Trajectory
 
 - Contour / surface plot of loss
 - Overlay optimizer path during training
 
 ---
 
-🚀 Quickstart
+## 🚀 Quickstart
 
+```bash
 git clone https://github.com/Iamyulx/optimizer-loss-landscape.git
 cd optimizer-loss-landscape
 pip install -r requirements.txt
+```
 
-Train a model:
+### Train a model:
 
 python train.py --optimizer adam
 
-Generate loss landscape:
+### Generate loss landscape:
 
 python loss_landscape.py
 
-Visualize:
+### Visualize:
 
 python plot.py
 
 ---
 
-📊 Example Insights
+## 📊 Example Insights
 
 Typical observations you can reproduce:
 
@@ -139,7 +144,7 @@ Typical observations you can reproduce:
 
 ---
 
-🧪 Experiments to Try
+## 🧪 Experiments to Try
 
 - Change optimizer ("sgd", "adam", "rmsprop")
 - Adjust learning rate
@@ -149,7 +154,7 @@ Typical observations you can reproduce:
 
 ---
 
-📉 Visualization Types
+## 📉 Visualization Types
 
 - 2D contour plots
 - 3D surface plots
@@ -158,7 +163,7 @@ Typical observations you can reproduce:
 
 ---
 
-⚠️ Limitations
+## ⚠️ Limitations
 
 This is a research/educational tool, not a production system:
 
@@ -170,7 +175,7 @@ Approximate geometry| Complex curvature structures
 
 ---
 
-🗺️ Roadmap
+## 🗺️ Roadmap
 
 - [ ] Hessian-based curvature analysis
 - [ ] Sharpness metrics (trace, eigenvalues)
@@ -181,7 +186,7 @@ Approximate geometry| Complex curvature structures
 
 ---
 
-📚 References
+## 📚 References
 
 - Li et al. (2018) — Visualizing the Loss Landscape of Neural Nets
 - Goodfellow et al. — Deep Learning (Optimization chapter)
@@ -189,7 +194,7 @@ Approximate geometry| Complex curvature structures
 
 ---
 
-💡 Why This Matters
+## 💡 Why This Matters
 
 Understanding optimization at a geometric level helps you:
 
@@ -200,13 +205,13 @@ Understanding optimization at a geometric level helps you:
 
 ---
 
-📄 License
+## 📄 License
 
 MIT © "Iamyulx" (https://github.com/Iamyulx)
 
 ---
 
-⭐ If You Like This Project
+## ⭐ If You Like This Project
 
 Give it a star ⭐ and use it as a base for:
 
